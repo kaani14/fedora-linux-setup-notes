@@ -16,14 +16,14 @@ configuration {
 }
 
 window {
-    width:            480px;
+    width:            420px;
     location:         center;
     anchor:           center;
     transparency:     "real";
     background-color: @bg;
-    border:           1px;
+    border:           3px;
     border-color:     @border-col;
-    border-radius:    14px;
+    border-radius:    18px;
     padding:          0px;
     window-type:      "dock";
 }
@@ -36,17 +36,20 @@ mainbox {
 
 inputbar {
     background-color: @transparent;
-    border-radius:    8px;
-    padding:          6px 4px;
+    border:           1px;
+    border-color:     rgba(255, 255, 255, 0.08);
+    border-radius:    4px;
+    padding:          8px 12px;
     spacing:          8px;
     children:         [ prompt, entry ];
+    margin:           0px 0px 6px 0px;
 }
 
 prompt {
     background-color: @transparent;
     text-color:       @fg-dim;
     font:             "SF Pro Display 12";
-    padding:          2px 0px;
+    padding:          2px 4px 2px 0px;
 }
 
 entry {
@@ -71,7 +74,7 @@ listview {
     spacing:          2px;
     scrollbar:        false;
     border:           0px;
-    padding:          4px 0px 0px 0px;
+    padding:          6px 0px 0px 0px;
 }
 
 element {
@@ -114,7 +117,7 @@ element alternate urgent {
 }
 
 element selected normal {
-    background-color: @bg-row-sel;
+    background-color: rgba(100, 80, 200, 0.15);
     text-color:       #ffffff;
 }
 
@@ -143,4 +146,12 @@ element-text {
 
 scrollbar {
     width: 0px;
+}
+
+textbox-num-filtered {
+    background-color: @transparent;
+    text-color:       rgba(160, 150, 200, 0.3);
+    font:             "SF Pro Display 11";
+    horizontal-align: 1.0;
+    padding:          4px 2px 0px 0px;
 }
