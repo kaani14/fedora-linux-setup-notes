@@ -1,0 +1,146 @@
+configuration {
+    modi:           "drun,run";
+    show-icons:     true;
+    font:           "SF Pro Display 12";
+    icon-theme:     "Papirus";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg:          rgba(18, 18, 35, 0.82);
+    bg-row-sel:  rgba(255, 255, 255, 0.07);
+    fg:          #e8e8f0;
+    fg-dim:      rgba(200, 200, 220, 0.45);
+    border-col:  rgba(100, 90, 160, 0.55);
+    transparent: rgba(0, 0, 0, 0);
+}
+
+window {
+    width:            480px;
+    location:         center;
+    anchor:           center;
+    transparency:     "real";
+    background-color: @bg;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    14px;
+    padding:          0px;
+    window-type:      "dock";
+}
+
+mainbox {
+    background-color: @transparent;
+    padding:          16px 18px 18px 18px;
+    spacing:          10px;
+}
+
+inputbar {
+    background-color: @transparent;
+    border-radius:    8px;
+    padding:          6px 4px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: @transparent;
+    text-color:       @fg-dim;
+    font:             "SF Pro Display 12";
+    padding:          2px 0px;
+}
+
+entry {
+    background-color: @transparent;
+    text-color:       @fg;
+    placeholder:      "Search...";
+    placeholder-color: @fg-dim;
+    font:             "SF Pro Display 12";
+    padding:          2px 0px;
+    cursor:           text;
+}
+
+case-indicator {
+    background-color: @transparent;
+    text-color:       @transparent;
+}
+
+listview {
+    background-color: @transparent;
+    lines:            7;
+    columns:          1;
+    spacing:          2px;
+    scrollbar:        false;
+    border:           0px;
+    padding:          4px 0px 0px 0px;
+}
+
+element {
+    background-color: @transparent;
+    text-color:       @fg;
+    padding:          9px 10px;
+    border-radius:    8px;
+    spacing:          10px;
+    orientation:      horizontal;
+}
+
+element normal normal {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element normal active {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element normal urgent {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element alternate normal {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element alternate active {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element alternate urgent {
+    background-color: @transparent;
+    text-color:       @fg;
+}
+
+element selected normal {
+    background-color: @bg-row-sel;
+    text-color:       #ffffff;
+}
+
+element selected active {
+    background-color: @bg-row-sel;
+    text-color:       #ffffff;
+}
+
+element selected urgent {
+    background-color: @bg-row-sel;
+    text-color:       #ffffff;
+}
+
+element-icon {
+    background-color: @transparent;
+    size:             22px;
+    vertical-align:   0.5;
+}
+
+element-text {
+    background-color: @transparent;
+    vertical-align:   0.5;
+    text-color:       inherit;
+    highlight:        none;
+}
+
+scrollbar {
+    width: 0px;
+}
